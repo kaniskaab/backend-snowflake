@@ -16,6 +16,11 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+app.get('/api/test', (req, res) => {
+    res.json({ message: 'Server is working!' });
+  });
+  
+
 app.post('/api/send-brochure', async (req, res) => {
   const { email } = req.body;
 
